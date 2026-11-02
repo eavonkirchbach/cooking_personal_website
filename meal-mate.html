@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Mate | My Cooking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation (shared across pages) -->
+  <header class="site-header">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cuisines.html">Cuisines</a>
+      <a href="meal-mate.html" class="current-page">Meal Mate</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Meal Mate</h2>
+
+    <p>
+      I built Meal Mate to help other students plan their own cuisine
+      weeks. Plan a week of meals around one cuisine, shop once, and use up
+      every ingredient before it goes bad. Try it out below!
+    </p>
+
+    <!-- Embedded site -->
+    <iframe
+      class="meal-mate-frame"
+      src="https://eat-good-n-cheap-students.lovable.app/"
+      title="Meal Mate"
+      loading="lazy">
+    </iframe>
+
+    <!-- Link in case the embed doesn't load -->
+    <p class="help-text">
+      Not loading?
+      <a href="https://eat-good-n-cheap-students.lovable.app/" target="_blank" rel="noopener">Open it in a new tab</a>.
+    </p>
+  </main>
+</body>
+</html>

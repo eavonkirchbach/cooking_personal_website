@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuisines | My Cooking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation (shared across pages) -->
+  <header class="site-header">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cuisines.html" class="current-page">Cuisines</a>
+      <a href="meal-mate.html">Meal Mate</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Heading smaller than the home page h1 -->
+    <h2>My Cuisine Weeks</h2>
+
+    <section>
+      <p>
+        Cooking for one in college comes with two big problems: ingredients go bad
+        before I can use them up, and I only get one shelf in a fridge I share with
+        two roommates. My solution is the cuisine week. Every week I pick one
+        country, plan my breakfasts, lunches, and dinners around that cuisine, and
+        buy a single shopping list of ingredients that shows up in almost every meal.
+      </p>
+      <p>
+        Because the meals share ingredients, nothing gets forgotten in the back of
+        the fridge. The black beans I buy for Monday's breakfast burrito end up in
+        Wednesday's burrito bowl, and the leftover steak from steak and vodka pasta
+        becomes steak and eggs the next morning. By the end of the week my shelf is empty,
+        and I have room to shop for the next cuisine.
+      </p>
+      <p>
+        Cuisine weeks also push me to keep learning. Some of the dishes below are
+        recipes I learned from my mom or in cooking classes, some are my own
+        creations from winging it with what was left in the fridge, and some are
+        dishes I still want to try. Each recipe is tagged so you can tell which is
+        which. Pick a country below to see what a full week of meals looks like,
+        along with the shopping list that makes it work.
+      </p>
+      <p class="tag-key">
+        <span class="recipe-tag tag-learned">Learned</span> a recipe someone taught me
+        <span class="recipe-tag tag-created">Created</span> my own recipe
+        <span class="recipe-tag tag-try">Need to Try</span> on my list
+      </p>
+
+      <!-- Jump links to each week (filled in by interactivity.js) -->
+      <ol class="cuisine-links" id="cuisine-links"></ol>
+    </section>
+
+    <!-- Cuisine weeks: built by interactivity.js from the CSV files in data/ -->
+    <div id="weeks"></div>
+
+    <!-- D3 visualization (drawn by interactivity.js from data/recipes.csv) -->
+    <section class="chart-section">
+      <h3>Recipe Breakdown by Cuisine</h3>
+      <p class="chart-subtitle">How many recipes in each week I've learned, created, or still need to try</p>
+      <div class="chart-legend">
+        <span><span class="legend-swatch" style="background:#4a7c3f"></span>Learned</span>
+        <span><span class="legend-swatch" style="background:#d9822b"></span>Created</span>
+        <span><span class="legend-swatch" style="background:#2a78d6"></span>Need to Try</span>
+      </div>
+      <div id="chart"></div>
+      <div id="tooltip" class="tooltip" hidden></div>
+      <details class="chart-table">
+        <summary>Show as a table</summary>
+        <table id="chart-data"></table>
+      </details>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="interactivity.js"></script>
+
+</body>
+</html>
